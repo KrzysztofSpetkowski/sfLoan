@@ -1,0 +1,3 @@
+loan_layout_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: LoanLayoutBundle:Default:index }

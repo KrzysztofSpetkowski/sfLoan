@@ -1,3 +1,15 @@
+loan_layout:
+    resource: "@LoanLayoutBundle/Resources/config/routing.yml"
+    prefix:   /
+
+loan_user:
+    resource: "@LoanUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
+loan_admin:
+    resource: "@LoanAdminBundle/Resources/config/routing.yml"
+    prefix:   /
+
 app:
     resource: @AppBundle/Controller/
     type:     annotation

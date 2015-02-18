@@ -1,0 +1,4 @@
+services:
+#    loan_layout.example:
+#        class: Loan\LayoutBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]
