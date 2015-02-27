@@ -1,0 +1,4 @@
+services:
+#    loan_product.example:
+#        class: Loan\ProductBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

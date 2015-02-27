@@ -1,3 +1,7 @@
+loan_product:
+    resource: "@LoanProductBundle/Resources/config/routing.yml"
+    prefix:   /
+
 loan_layout:
     resource: "@LoanLayoutBundle/Resources/config/routing.yml"
     prefix:   /

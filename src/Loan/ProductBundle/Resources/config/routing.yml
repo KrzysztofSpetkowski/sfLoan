@@ -1,0 +1,3 @@
+loan_product_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: LoanProductBundle:Default:index }
