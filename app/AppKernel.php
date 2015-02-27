@@ -22,6 +22,7 @@ class AppKernel extends Kernel
             new Loan\LayoutBundle\LoanLayoutBundle(),
             new Loan\ProductBundle\LoanProductBundle(),
             new FOS\UserBundle\FOSUserBundle(),
+            new Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle(),
           
         );
 
