@@ -3,6 +3,8 @@
 namespace Loan\ProductBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
+
 
 /**
  * Loan
@@ -29,9 +31,9 @@ class Loan
     private $description;
 
     /**
-     * @var string
-     *
-     * @ORM\Column(name="title", type="text")
+     * @ORM\ManyToOne(targetEntity="Loan\UserBundle\Entity\User", inversedBy="loans")
+     * @ORM\JoinColumn(name="title", referencedColumnName="id")
+     * @var Loan\UserBundle\Entity\User
      */
     private $title;
 
@@ -48,6 +50,13 @@ class Loan
      * @ORM\Column(name="non_bank_loan", type="string", length=255)
      */
     private $nonBankLoan;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="loan", type="string", length=255)
+     */
+    private $loan;
 
 
     /**
@@ -151,4 +160,23 @@ class Loan
     {
         return $this->nonBankLoan;
     }
+     /**
+     * Set Loan
+     *
+     * @param string $loan
+     * @return Loan
+     */
+    public function setLoan($loan) 
+    {
+     $this->loan = $loan;   
+    }
+    /**
+     * Get Loan
+     *
+     * @return string 
+     */
+    public function getLoan()
+    {
+        return $this->setLoan;
+    }        
 }

@@ -1,3 +1,4 @@
+
 loan_product:
     resource: "@LoanProductBundle/Resources/config/routing.yml"
     prefix:   /
@@ -17,3 +18,7 @@ loan_admin:
 app:
     resource: @AppBundle/Controller/
     type:     annotation
+    
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+    

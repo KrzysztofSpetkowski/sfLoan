@@ -3,15 +3,20 @@
 namespace Loan\UserBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use FOS\UserBundle\Model\User as BaseUser;
+use Doctrine\Common\Collections\ArrayCollection;
 
-/**
- * User
- *
- * @ORM\Table()
- * @ORM\Entity
- */
-class User
+    /**
+     * @ORM\Entity
+     * @ORM\Table(name="fos_user")
+     */
+class User extends BaseUser
 {
+    public function __construct()
+    {
+        parent::__construct();
+        // your own logic
+    }
     /**
      * @var integer
      *
@@ -19,13 +24,12 @@ class User
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
-    private $id;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="loan", type="string", length=255)
-     */
+    protected $id;
+   
+     /**
+      * @ORM\OneToMany(targetEntity="User", mappedBy="loan")
+      * @var ArrayCollection
+      */
     private $loan;
 
 

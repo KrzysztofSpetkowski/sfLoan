@@ -21,6 +21,8 @@ class AppKernel extends Kernel
             new Loan\UserBundle\LoanUserBundle(),
             new Loan\LayoutBundle\LoanLayoutBundle(),
             new Loan\ProductBundle\LoanProductBundle(),
+            new FOS\UserBundle\FOSUserBundle(),
+          
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
