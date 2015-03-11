@@ -14,15 +14,35 @@
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
-        {{ knp_menu_render('LoanLayoutBundle:Builder:mainMenu') }}
         
+        <div class="container">
+
+          <div class="masthead">
+              
+            <p class="pull-right">
+                {% if app.user %}
+                  
+                Jesteś zalogowany jako: {{ app.user.username }} 
+                
+                  <a href="{{ path('fos_user_security_logout') }}">[wyloguj]</a>
+               
+                {% else %}
+                     <a href="{{ path('fos_user_security_login') }}">zaloguj się</a>
+                {% endif %}
+            </p>
+    
+            <h3 class="text-muted">POŻYCZKI GOTÓWKOWE</h3>
+   
+            <div class="navbar-collapse collapse" id="navbar">
+        {{ knp_menu_render('LoanLayoutBundle:Builder:mainMenu') }}
+             </div>
         <div class="container">
             {% block body %}{% endblock %}
             
             <!-- Site footer -->
-          <div class="footer">
+         <div class="footer">
             <p>&copy; Company 2015</p>
-          </div>
+         </div>
         </div>
         
         {% block javascripts %}

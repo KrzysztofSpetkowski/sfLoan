@@ -23,6 +23,15 @@ class Builder extends ContainerAware {
         $menu->addChild('Strona główna', [
             'route' => 'loan_loan_list'
             ]) ;
+         $menu->addChild('Pożyczki bankowe', [
+            'uri' => '#'
+            ]) ;
+          $menu->addChild('Pożyczki pozabankowe', [
+            'uri' => '#'
+            ]) ;
+           $menu->addChild('Lista klientów', [
+            'uri' => '#'
+            ]) ;
     return $menu;        
     }
 
