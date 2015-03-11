@@ -1,3 +1,7 @@
 loan_product_homepage:
     path:     /hello/{name}
     defaults: { _controller: LoanProductBundle:Default:index }
+    
+loan_loan_list:
+    path:     /
+    defaults: { _controller: LoanProductBundle:Loan:list }
