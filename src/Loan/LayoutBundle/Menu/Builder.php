@@ -32,7 +32,9 @@ class Builder extends ContainerAware {
            $menu->addChild('Lista klientów', [
             'uri' => '#'
             ]) ;
+           $menu->addChild('Zaproś do współpracy', [
+            'uri' => '#'
+            ]) ;
     return $menu;        
     }
-
 }
